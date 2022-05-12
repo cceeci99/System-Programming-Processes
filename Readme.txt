@@ -42,7 +42,7 @@ in build directory  are stored only object files  queue.o, urls.o utils.o, work.
 
 Compiling/Running Project
 =========================================================================================================================================
-- make worker sniffer -> command for seperate compilation of all sources files, and making the main executables sniffer & worker
+- make all -> command for seperate compilation of all sources files, and making the main executables sniffer & worker
 
 *sniffer is the executable which user will run, and worker is the executable which is called from sniffer with execvp("./worker")*
 

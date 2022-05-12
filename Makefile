@@ -6,10 +6,8 @@ worker = ./src/worker
 
 WORKER_OBJS = ./build/utils.o ./build/urls.o ./build/work.o
 
-sniffer: ./src/sniffer.c $(SNIFFER_OBJS)
+all: ./src/sniffer.c $(SNIFFER_OBJS) ./src/worker.c $(WORKER_OBJS)
 	gcc -o sniffer ./src/sniffer.c $(SNIFFER_OBJS)
-
-worker: ./src/worker.c $(WORKER_OBJS)
 	gcc -o worker ./src/worker.c $(WORKER_OBJS)
 
 ./build/utils.o: ./src/utils.c ./src/utils.h

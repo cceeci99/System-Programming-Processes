@@ -266,7 +266,7 @@ void sigchld_handler(int signum) {
 
             if (WIFSTOPPED(status)) {       // When Worker status changed from SIGSTOP signal
 
-                if (!workers[pos].stopped) {    // safe code  because enqueue method is O(1) and there is no problem with catching signals from many workers at the same time
+                if (!workers[pos].stopped) {    // safe code because enqueue method is O(1) and there is no problem with catching signals from many workers at the same time
 
                     enqueue(workers_queue, pid);
                     workers[pos].stopped = 1;
