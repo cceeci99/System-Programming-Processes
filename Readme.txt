@@ -26,6 +26,14 @@ finder.sh  -> bash script
 
 Makefile
 Readme
+
+******** !!!! ********                                                                                                         ***
+sniffer, worker executables & finder.sh's are strictly  in main's project (/project) directory alongside with Makefile, Readme ***
+To work properly they must be not moved!!!                                                                                     ***
+in build directory  are stored only object files  queue.o, urls.o utils.o, work.o (can be ignored)                             *** 
+******** !!!! ********                                                                                                         ***
+
+
 ==============================================================
 
 
@@ -54,14 +62,9 @@ Clean objects files/executables:
 -------------------------------
 - make clean
 
-Command to run with valgrind
-============================
-- make valgrind -> default path is used, output of valgrind is sent to directory logs
-... Sometimes undefined behaviour may occur because of valgrind
-======================================================================================================================================
-
 
 -       -       -       -       -       -       -       -       -       -       -       -       -       -       -
+
 
 Code Explained
 ===========================================================================================================

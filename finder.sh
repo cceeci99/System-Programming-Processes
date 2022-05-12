@@ -5,7 +5,6 @@ files="./results/*.out"                                 # results files are stor
 for tld in $@
 do 
     sum=0
-    echo "Counting TLD:'$tld' appearances"
 
     for file in $files                                  # iterate over .out files in directory results
     do
@@ -23,6 +22,5 @@ do
             echo "Warning: $file is not file\n"
         fi
     done
-
-    echo -e "TLD: '$tld' found total $sum times\n"      # echo result
+    echo -e "$tld $sum"
 done
